@@ -35,7 +35,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1.5rem;
-    padding: 2rem;
+    padding: 2.5% 2rem;
     flex: 1;
 }
 
@@ -56,7 +56,7 @@ body {
     padding-bottom: 0.5rem;
 }
 
-/* Telemetry Chart Container Fix */
+/* Telemetry Card Container */
 .telemetry-card {
     position: relative;
     height: 300px;
@@ -74,6 +74,13 @@ body {
     font-size: 0.9rem;
     margin-bottom: 1rem;
     color: #cbd5e1;
+}
+
+.commit-log {
+    min-height: 40px;
+    max-height: 80px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
 }
 
 .git-actions {

@@ -29,4 +29,31 @@ function simulateGitAction(action) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', renderCommits);
+document.addEventListener('Dfunction simulateGitAction(action) {\n' +
+    '  const syncStatus = document.getElementById("sync-status");\n' +
+    '  const commitLog = document.getElementById("commit-log");\n' +
+    '\n' +
+    '  if (!syncStatus) return;\n' +
+    '\n' +
+    '  const timestamp = new Date().toLocaleTimeString();\n' +
+    '\n' +
+    '  if (action === \'commit\') {\n' +
+    '    syncStatus.textContent = "Changes committed locally";\n' +
+    '    syncStatus.style.color = "#38bdf8";\n' +
+    '    if (commitLog) {\n' +
+    '      commitLog.innerHTML += `<div style="font-size:0.85rem; color:#94a3b8; margin-top:0.25rem;">[${timestamp}] Committed staged changes.</div>`;\n' +
+    '    }\n' +
+    '  } else if (action === \'push\') {\n' +
+    '    syncStatus.textContent = "Synced with origin/main";\n' +
+    '    syncStatus.style.color = "#4ade80";\n' +
+    '    if (commitLog) {\n' +
+    '      commitLog.innerHTML += `<div style="font-size:0.85rem; color:#4ade80; margin-top:0.25rem;">[${timestamp}] Pushed commits to GitHub.</div>`;\n' +
+    '    }\n' +
+    '  } else if (action === \'pull\') {\n' +
+    '    syncStatus.textContent = "Up to date";\n' +
+    '    syncStatus.style.color = "#f43f5e";\n' +
+    '    if (commitLog) {\n' +
+    '      commitLog.innerHTML += `<div style="font-size:0.85rem; color:#38bdf8; margin-top:0.25rem;">[${timestamp}] Pulled latest changes from remote.</div>`;\n' +
+    '    }\n' +
+    '  }\n' +
+    '}OMContentLoaded', renderCommits);
