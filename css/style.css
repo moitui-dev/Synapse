@@ -1,63 +1,98 @@
-.git-card {
-    grid-column: span 2; /* Spans across columns for a clean full-width bottom view */
+/* Base Theme */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-family: system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top Bar Header */
+.top-bar {
+    background-color: #1e1b4b;
+    border-bottom: 1px solid #4a0e17;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #f43f5e;
+}
+
+/* Dashboard Grid Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    flex: 1;
+}
+
+/* Cards (Burgundy Theme) */
+.card {
+    background-color: #27060f;
+    border: 1px solid #4a0e17;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #fda4af;
+    border-bottom: 1px solid #4a0e17;
+    padding-bottom: 0.5rem;
+}
+
+/* Telemetry Chart Container Fix */
+.telemetry-card {
+    position: relative;
+    height: 300px;
+}
+
+.telemetry-card canvas {
+    max-height: 230px !important;
+    width: 100% !important;
+}
+
+/* Git Card & Actions */
 .git-status-bar {
     display: flex;
     justify-content: space-between;
-    background: var(--bg-secondary);
-    padding: 10px 14px;
-    border-radius: 6px;
-    margin-bottom: 14px;
     font-size: 0.9rem;
-}
-
-.commit-log {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    max-height: 150px;
-    overflow-y: auto;
-    margin-bottom: 14px;
-}
-
-.commit-item {
-    background: var(--bg-secondary);
-    padding: 8px 12px;
-    border-radius: 4px;
-    font-size: 0.85krem;
-    display: flex;
-    justify-content: space-between;
-    border-left: 2px solid var(--accent-burgundy-light);
-}
-
-.commit-message {
-    color: var(--text-main);
-}
-
-.commit-hash {
-    color: var(--text-muted);
-    font-family: monospace;
+    margin-bottom: 1rem;
+    color: #cbd5e1;
 }
 
 .git-actions {
     display: flex;
-    gap: 10px;
+    gap: 0.75rem;
+    margin-top: 1rem;
 }
 
 .git-btn {
-    flex: 1;
-    background: var(--bg-secondary);
-    color: var(--text-main);
-    border: 1px solid var(--border-color);
-    padding: 10px;
-    border-radius: 6px;
+    background-color: #4a0e17;
+    color: white;
+    border: 1px solid #f43f5e;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
-    transition: background 0.2s ease;
+    transition: background-color 0.2s;
 }
 
 .git-btn:hover {
-    background: var(--accent-burgundy);
-    border-color: var(--accent-burgundy-light);
+    background-color: #800020;
 }
